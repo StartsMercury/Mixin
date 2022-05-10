@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: gradle/wrapper-validation-action@v1
-      - run: ./gradlew build publishToMavenLocal --stacktrace
+      - run: ./gradlew build --stacktrace
       - if: ${{ matrix.java == '17-jdk' }}
         uses: actions/upload-artifact@v2
         with:
